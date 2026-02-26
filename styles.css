@@ -133,9 +133,6 @@ body.home .header {
   background: rgba(6, 72, 67, 0.78);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(6px);
-  position: sticky;
-  top: 0;
-  z-index: 10;
 }
 
 body.home.is-ready .header {
@@ -210,6 +207,18 @@ body.register .header {
   box-shadow: 0 10px 20px rgba(15, 23, 42, 0.22);
 }
 
+#adminLink {
+  background: rgba(64, 224, 208, 0.2);
+  border: 1px solid rgba(64, 224, 208, 0.4);
+  font-weight: 600;
+}
+
+#adminLink:hover {
+  background: rgba(64, 224, 208, 0.3);
+  border-color: rgba(64, 224, 208, 0.6);
+  box-shadow: 0 10px 20px rgba(64, 224, 208, 0.3);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal,
   .reveal-list li,
@@ -266,6 +275,64 @@ body.admin .content-card {
   backdrop-filter: blur(10px);
 }
 
+body.admin .content-card {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.admin .content-card h2 {
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+body.admin .content-card p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+body.admin .form-row label {
+  color: #ffffff;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+body.admin .form-row input,
+body.admin .form-row select {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  backdrop-filter: blur(10px);
+}
+
+body.admin .form-row input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+body.admin .form-row input:focus,
+body.admin .form-row select:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(64, 224, 208, 0.5);
+  box-shadow: 0 0 15px rgba(64, 224, 208, 0.3);
+}
+
+body.admin select option {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+body.admin table {
+  color: #ffffff;
+}
+
+body.admin th {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+body.admin td {
+  color: rgba(255, 255, 255, 0.95);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
 .stat-card h2 {
   margin: 0;
   font-size: 0.95rem;
@@ -293,6 +360,17 @@ body.admin .content-card {
   border-radius: 10px;
   padding: 1rem;
   box-shadow: 0 2px 10px rgba(15, 23, 42, 0.08);
+}
+
+body.admin .panel {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+body.admin .panel-head h2 {
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .content-grid {
@@ -360,19 +438,38 @@ body.admin .content-card {
 }
 
 .form-row label {
-  font-size: 0.9rem;
-  color: #334155;
+  font-size: 0.95rem;
+  color: #ffffff;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .form-row input,
 .form-row textarea,
 .form-row select {
   width: 100%;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  padding: 0.5rem 0.65rem;
-  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 0.75rem 0.9rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  color: #fff;
   font: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-row input:focus,
+.form-row textarea:focus,
+.form-row select:focus {
+  outline: none;
+  border-color: rgba(64, 224, 208, 0.7);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 25px rgba(64, 224, 208, 0.4);
+}
+
+.login-card input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .form-row textarea {
@@ -405,8 +502,15 @@ body.admin .content-card {
 }
 
 .btn-primary {
-  background: #0f766e;
+  background: linear-gradient(135deg, #40e0d0, #0f766e);
   color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(64, 224, 208, 0.4);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #00CED1, #0d9488);
+  box-shadow: 0 6px 20px rgba(64, 224, 208, 0.6);
 }
 
 .btn-secondary {
@@ -415,12 +519,32 @@ body.admin .content-card {
 }
 
 .note {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 0.85rem;
-  font-size: 0.92rem;
-  line-height: 1.5;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  padding: 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
+  margin-top: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.note strong {
+  color: #40e0d0;
+  font-size: 1rem;
+  text-shadow: 0 0 10px rgba(64, 224, 208, 0.5);
+}
+
+.note code {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .site-footer {
@@ -445,6 +569,11 @@ body.register .site-footer {
   color: rgba(255, 255, 255, 0.82);
 }
 
+body.login .site-footer {
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
 .panel-head {
   display: flex;
   align-items: center;
@@ -460,6 +589,10 @@ body.register .site-footer {
 
 .filter-label {
   font-size: 0.9rem;
+}
+
+body.admin .filter-label {
+  color: #ffffff;
 }
 
 select {
@@ -557,35 +690,140 @@ thead th {
 }
 
 .login-wrapper {
-  max-width: 480px;
+  max-width: 500px;
   margin: 2rem auto;
+  padding: 4px;
+  background: linear-gradient(45deg, 
+    #ff0080, 
+    #ff8c00, 
+    #40e0d0, 
+    #00ff00, 
+    #8a2be2, 
+    #ff0080
+  );
+  background-size: 300% 300%;
+  animation: glowingBorder 4s linear infinite;
+  border-radius: 24px;
+  box-shadow: 
+    0 0 60px rgba(255, 0, 128, 0.5),
+    0 0 100px rgba(64, 224, 208, 0.3);
+}
+
+@keyframes glowingBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .login-card {
   max-width: 100%;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.login-card h2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin: 0 0 1.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  animation: fadeInDown 0.6s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-header h1 {
+  font-size: 2.25rem;
+  margin: 0 0 0.5rem 0;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(255, 0, 128, 0.5);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px rgba(255, 0, 128, 0.5);
+  }
+  to {
+    text-shadow: 0 0 30px rgba(64, 224, 208, 0.8), 0 0 40px rgba(255, 140, 0, 0.6);
+  }
+}
+
+.login-header p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  letter-spacing: 0.5px;
 }
 
 .error-message {
-  background: #fee2e2;
-  color: #b91c1c;
-  padding: 0.75rem;
-  border-radius: 8px;
+  background: rgba(254, 226, 226, 0.15);
+  color: #ff6b6b;
+  padding: 0.85rem;
+  border-radius: 12px;
   margin: 0.75rem 0;
   font-size: 0.9rem;
-  border: 1px solid #fca5a5;
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  backdrop-filter: blur(10px);
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
 }
 
 .admin-welcome {
-  background: #dcfce7;
-  border: 1px solid #86efac;
+  background: rgba(15, 167, 88, 0.2);
+  border: 1px solid rgba(134, 239, 172, 0.5);
   border-radius: 10px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
+  backdrop-filter: blur(10px);
 }
 
 .admin-welcome h2 {
   margin: 0;
-  color: #15803d;
+  color: #86efac;
+  text-shadow: 0 2px 8px rgba(15, 167, 88, 0.5);
+}
+
+.admin-welcome span {
+  color: #ffffff;
 }
 
 .btn-small {

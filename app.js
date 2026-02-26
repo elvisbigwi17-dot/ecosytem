@@ -78,15 +78,19 @@ function applyFilter() {
 async function init() {
   // Check if logged in and update nav
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser") || "null");
-  const loginLink = document.getElementById("loginLink");
+  const changeUserLink = document.getElementById("changeUserLink");
+  const adminLink = document.getElementById("adminLink");
   
-  if (loggedInUser && loginLink) {
-    loginLink.textContent = "Logout";
-    loginLink.href = "#";
-    loginLink.addEventListener("click", (e) => {
+  // Show admin dashboard link if user is admin
+  if (loggedInUser && loggedInUser.role === "admin" && adminLink) {
+    adminLink.style.display = "inline-block";
+  }
+  
+  if (loggedInUser && changeUserLink) {
+    changeUserLink.addEventListener("click", (e) => {
       e.preventDefault();
       localStorage.removeItem("loggedInUser");
-      window.location.reload();
+      window.location.href = "login.html";
     });
   }
 

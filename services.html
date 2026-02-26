@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services - Eco Stream Logistics</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="auth-check.js"></script>
 </head>
 <body class="services">
   <header class="header">
@@ -18,6 +19,8 @@
       <a href="services.html" class="active">Services</a>
       <a href="contact.html">Contact</a>
       <a href="register.html">Register</a>
+      <a href="admin.html" id="adminLink" style="display: none;">Admin Dashboard</a>
+      <a href="#" id="changeUserLink">Change User</a>
     </nav>
   </header>
 
@@ -52,24 +55,24 @@
       </article>
 
       <article class="content-card">
-        <h2>Delivery Rates</h2>
-        <p>Estimated standard delivery rates for three districts in Rwanda.</p>
-        <div class="rate-chart" aria-label="Delivery Rates Graph">
+        <h2>Monthly Delivery Statistics</h2>
+        <p>Average deliveries completed per district (last 30 days).</p>
+        <div class="rate-chart" aria-label="Delivery Statistics Graph">
           <div class="rate-column">
             <div class="rate-bar-wrap">
-              <div class="rate-bar" style="height: 100%">12,000 RWF</div>
+              <div class="rate-bar" style="height: 100%">28 Deliveries</div>
             </div>
             <div class="rate-label">Kigali</div>
           </div>
           <div class="rate-column">
             <div class="rate-bar-wrap">
-              <div class="rate-bar" style="height: 75%">9,000 RWF</div>
+              <div class="rate-bar" style="height: 60%">17 Deliveries</div>
             </div>
             <div class="rate-label">Musanze</div>
           </div>
           <div class="rate-column">
             <div class="rate-bar-wrap">
-              <div class="rate-bar" style="height: 83.33%">10,000 RWF</div>
+              <div class="rate-bar" style="height: 78.5%">22 Deliveries</div>
             </div>
             <div class="rate-label">Rubavu</div>
           </div>
@@ -79,9 +82,10 @@
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 Eco Stream Logistics. All rights reserved.</p>
+    <p>© 2026 Eco Stream Logistics. All rights reserved. | Made by Bigwi Ntare Elvis</p>
   </footer>
 
+  <script src="logout.js" defer></script>
   <script src="page-animations.js" defer></script>
   <script src="scroll-effects.js" defer></script>
 </body>
