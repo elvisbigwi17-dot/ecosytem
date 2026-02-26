@@ -1,0 +1,44 @@
+[
+  {
+    "id": "ESL-1001",
+    "origin": "Lagos",
+    "destination": "Abuja",
+    "status": "In Transit",
+    "eta": "2026-02-27"
+  },
+  {
+    "id": "ESL-1002",
+    "origin": "Port Harcourt",
+    "destination": "Kano",
+    "status": "Delivered",
+    "eta": "2026-02-24"
+  },
+  {
+    "id": "ESL-1003",
+    "origin": "Ibadan",
+    "destination": "Enugu",
+    "status": "Delayed",
+    "eta": "2026-02-28"
+  },
+  {
+    "id": "ESL-1004",
+    "origin": "Kaduna",
+    "destination": "Onitsha",
+    "status": "In Transit",
+    "eta": "2026-03-01"
+  },
+  {
+    "id": "ESL-1005",
+    "origin": "Abeokuta",
+    "destination": "Jos",
+    "status": "Delivered",
+    "eta": "2026-02-25"
+  },
+  {
+    "id": "ESL-1006",
+    "origin": "Benin City",
+    "destination": "Maiduguri",
+    "status": "Delayed",
+    "eta": "2026-03-02"
+  }
+]

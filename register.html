@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - Eco Stream Logistics</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="register">
+  <header class="header">
+    <div class="header-brand">
+      <h1>Eco Stream Logistics</h1>
+      <p>Service registration and onboarding submission</p>
+    </div>
+    <nav class="top-nav" aria-label="Main Navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="register.html" class="active">Register</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="register-grid">
+      <article class="content-card">
+        <h2>Register for Our Services</h2>
+        <p>
+          Register with us by filling out the form with your company and shipment requirements.
+          Click <strong>Download Word Document</strong> to save your details as a `.doc` file.
+        </p>
+        <p>
+          Then click <strong>Send by Email</strong>. Your registration will be handled by email at
+          <strong>bigwielvis@gmail.com</strong>.
+        </p>
+
+        <form id="registrationForm" class="register-form">
+          <div class="form-row">
+            <label for="companyName">Company Name</label>
+            <input id="companyName" name="companyName" type="text" required />
+          </div>
+
+          <div class="form-row">
+            <label for="contactPerson">Contact Person</label>
+            <input id="contactPerson" name="contactPerson" type="text" required />
+          </div>
+
+          <div class="form-row">
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Business Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+
+          <div class="form-row">
+            <label for="serviceType">Service Type</label>
+            <select id="serviceType" name="serviceType" required>
+              <option value="">Select a service</option>
+              <option value="Standard Freight">Standard Freight</option>
+              <option value="Priority Dispatch">Priority Dispatch</option>
+              <option value="Contract Logistics">Contract Logistics</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="cargoDetails">Cargo Details</label>
+            <textarea id="cargoDetails" name="cargoDetails" required></textarea>
+          </div>
+
+          <div class="form-row">
+            <label for="monthlyVolume">Estimated Monthly Volume</label>
+            <input id="monthlyVolume" name="monthlyVolume" type="text" required />
+          </div>
+
+          <div class="form-row">
+            <label for="coverageArea">Coverage Area / Routes</label>
+            <input id="coverageArea" name="coverageArea" type="text" required />
+          </div>
+
+          <div class="action-row">
+            <button type="submit" id="downloadDoc" class="btn btn-primary">Register & Download Word</button>
+            <a id="sendEmail" class="btn btn-secondary" href="#">Send by Email</a>
+          </div>
+        </form>
+      </article>
+
+      <article class="content-card">
+        <h2>Submission Instructions</h2>
+        <div class="note">
+          1. Complete all required fields.<br />
+          2. Download the generated Word file.<br />
+          3. Open your email with the Send button.<br />
+          4. Attach the downloaded document and send to <strong>bigwielvis@gmail.com</strong>.
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Eco Stream Logistics. All rights reserved.</p>
+  </footer>
+
+  <script src="page-animations.js" defer></script>
+  <script src="register.js" defer></script>
+</body>
+</html>

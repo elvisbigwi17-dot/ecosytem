@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eco Stream Logistics</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="home">
+  <header class="header">
+    <div class="header-brand">
+      <h1>Eco Stream Logistics</h1>
+      <p>Shipment tracking and performance snapshot</p>
+    </div>
+    <nav class="top-nav" aria-label="Main Navigation">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="stats" aria-label="Key Metrics">
+      <article class="stat-card">
+        <h2>Total Shipments</h2>
+        <p id="totalShipments">0</p>
+        <p class="van-name" id="vanName1"></p>
+      </article>
+      <article class="stat-card">
+        <h2>In Transit</h2>
+        <p id="inTransitCount">0</p>
+        <p class="van-name" id="vanName2"></p>
+      </article>
+      <article class="stat-card">
+        <h2>Delivered</h2>
+        <p id="deliveredCount">0</p>
+        <p class="van-name" id="vanName3"></p>
+      </article>
+      <article class="stat-card">
+        <h2>Delayed</h2>
+        <p id="delayedCount">0</p>
+        <p class="van-name" id="vanName4"></p>
+      </article>
+    </section>
+
+    <section class="panel" aria-label="Shipment Table">
+      <div class="panel-head">
+        <h2>Shipments</h2>
+        <label for="statusFilter" class="filter-label">Status</label>
+        <select id="statusFilter">
+          <option value="all">All</option>
+          <option value="In Transit">In Transit</option>
+          <option value="Delivered">Delivered</option>
+          <option value="Delayed">Delayed</option>
+        </select>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Origin</th>
+              <th>Destination</th>
+              <th>Status</th>
+              <th>ETA</th>
+            </tr>
+          </thead>
+          <tbody id="shipmentBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="content-grid" aria-label="Registration Prompt">
+      <article class="content-card">
+        <h2>Ready to Register for Services?</h2>
+        <p>
+          Register with us on our registration page. Your registration will be handled by email at
+          <strong>bigwielvis@gmail.com</strong>.
+        </p>
+        <p><a href="register.html">Go to Service Registration</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Eco Stream Logistics. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
