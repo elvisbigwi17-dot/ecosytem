@@ -76,6 +76,29 @@ function applyFilter() {
 }
 
 async function init() {
+  // Check if logged in and update nav
+  const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser") || "null");
+  const loginLink = document.getElementById("loginLink");
+  
+  if (loggedInUser && loginLink) {
+    loginLink.textContent = "Logout";
+    loginLink.href = "#";
+    loginLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      localStorage.removeItem("loggedInUser");
+      window.location.reload();
+    });
+  }
+
+  // Try to load from localStorage first (admin edits)
+  const storedShipments = localStorage.getItem("shipments");
+  if (storedShipments) {
+    shipments = JSON.parse(storedShipments);
+    applyFilter();
+    return;
+  }
+
+  // Otherwise try to fetch from JSON
   try {
     const response = await fetch("shipments.json");
     if (!response.ok) {

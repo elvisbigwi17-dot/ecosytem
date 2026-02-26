@@ -258,7 +258,9 @@ body.about .content-card {
 
 body.services .content-card,
 body.contact .content-card,
-body.register .content-card {
+body.register .content-card,
+body.login .content-card,
+body.admin .content-card {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(10px);
@@ -552,6 +554,62 @@ thead th {
 .status-delayed {
   background: #fee2e2;
   color: #b91c1c;
+}
+
+.login-wrapper {
+  max-width: 480px;
+  margin: 2rem auto;
+}
+
+.login-card {
+  max-width: 100%;
+}
+
+.error-message {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin: 0.75rem 0;
+  font-size: 0.9rem;
+  border: 1px solid #fca5a5;
+}
+
+.admin-welcome {
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-welcome h2 {
+  margin: 0;
+  color: #15803d;
+}
+
+.btn-small {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-small:hover {
+  transform: translateY(-2px);
+}
+
+.btn-danger {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.btn-danger:hover {
+  background: #b91c1c;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
 }
 
 @media (max-width: 640px) {

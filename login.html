@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Eco Stream Logistics</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="login">
+  <header class="header">
+    <div class="header-brand">
+      <h1>Eco Stream Logistics</h1>
+      <p>Secure login portal</p>
+    </div>
+    <nav class="top-nav" aria-label="Main Navigation">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="login-wrapper">
+      <article class="content-card login-card">
+        <h2>Login</h2>
+        <form id="loginForm" class="register-form">
+          <div class="form-row">
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" required autocomplete="username" />
+          </div>
+
+          <div class="form-row">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" required autocomplete="current-password" />
+          </div>
+
+          <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+          <div class="action-row">
+            <button type="submit" class="btn btn-primary">Login</button>
+          </div>
+        </form>
+
+        <div class="note">
+          <strong>Demo Credentials:</strong><br />
+          Admin: <code>admin / admin123</code><br />
+          User: <code>user / user123</code>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Eco Stream Logistics. All rights reserved.</p>
+  </footer>
+
+  <script src="login.js" defer></script>
+</body>
+</html>

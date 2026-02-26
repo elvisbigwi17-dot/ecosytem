@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - Eco Stream Logistics</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="admin">
+  <header class="header">
+    <div class="header-brand">
+      <h1>Eco Stream Logistics</h1>
+      <p>Admin Dashboard</p>
+    </div>
+    <nav class="top-nav" aria-label="Main Navigation">
+      <a href="admin.html" class="active">Dashboard</a>
+      <a href="index.html">View Site</a>
+      <a href="#" id="logoutBtn">Logout</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="admin-welcome">
+      <h2>Welcome, <span id="adminName">Administrator</span></h2>
+    </section>
+
+    <section class="content-card">
+      <h2>Add New Shipment</h2>
+      <form id="addShipmentForm" class="register-form">
+        <div class="form-row">
+          <label for="shipmentId">Shipment ID</label>
+          <input id="shipmentId" name="shipmentId" type="text" required placeholder="ESL-1007" />
+        </div>
+
+        <div class="form-row">
+          <label for="origin">Origin</label>
+          <input id="origin" name="origin" type="text" required placeholder="Lagos" />
+        </div>
+
+        <div class="form-row">
+          <label for="destination">Destination</label>
+          <input id="destination" name="destination" type="text" required placeholder="Abuja" />
+        </div>
+
+        <div class="form-row">
+          <label for="status">Status</label>
+          <select id="status" name="status" required>
+            <option value="">Select status</option>
+            <option value="In Transit">In Transit</option>
+            <option value="Delivered">Delivered</option>
+            <option value="Delayed">Delayed</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="eta">ETA</label>
+          <input id="eta" name="eta" type="date" required />
+        </div>
+
+        <div class="action-row">
+          <button type="submit" class="btn btn-primary">Add Shipment</button>
+          <button type="button" id="clearForm" class="btn btn-secondary">Clear</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Manage Shipments</h2>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Origin</th>
+              <th>Destination</th>
+              <th>Status</th>
+              <th>ETA</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="adminShipmentBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Eco Stream Logistics. All rights reserved.</p>
+  </footer>
+
+  <script src="admin.js" defer></script>
+</body>
+</html>
